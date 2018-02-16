@@ -21,8 +21,8 @@ const drivers = [
 ];
 function driversByRevenue(drivers) {
   drivers.sort(function (a, b) {
-	   return a.revenue.localeCompare(b.revenue);
-  });
+	   return a.localeCompare(b);
+  })(drivers.revenue);
 }
 
 function driversByName(drivers) {
