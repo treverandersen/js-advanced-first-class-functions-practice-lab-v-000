@@ -14,11 +14,12 @@ function logDriversByHometown(drivers, location) {
 }
 
 function driversByRevenue(drivers) {
-  const arr = drivers.revenue;
-  arr.sort(function (a, b) {
-	   return a - b;
+  drivers.forEach(function (revenue) {
+    drivers.revenue.sort(function (a, b) {
+      return a - b;
+    });
   });
-  return arr;
+  return drivers;
 }
 
 function driversByName(drivers) {
