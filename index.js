@@ -1,6 +1,6 @@
 // Code your solution in this file!
 function logDriverNames(drivers) {
-  driversCopy.forEach(function (d) {
+  drivers.forEach(function (d) {
     console.log(d.name)
   });
 }
