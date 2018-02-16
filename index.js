@@ -12,19 +12,17 @@ function logDriversByHometown(drivers, location) {
     }
   });
 }
-
-function driversByRevenue(array) {
-  var swapped;
-  do {
-    swapped = false;
-    for(var i = 0; i < array.length; i++) {
-      if(array[i] && array[i + 1] && array[i] > array[i + 1]) {
-        swap(array, i, i + 1);
-        swapped = true;
-      }
-    }
-  } while(swapped);
-  return array;
+const drivers = [
+  { name: 'Bobby',   hometown: 'Pittsburgh',  revenue: 3000 },
+  { name: 'Sally',   hometown: 'New York',    revenue: 2000 },
+  { name: 'Sammy',   hometown: 'Pittsburgh',  revenue: 2500 },
+  { name: 'Annette', hometown: 'Los Angeles', revenue: 6000 },
+  { name: 'Bobby',   hometown: 'Tampa Bay',   revenue: 5000 }
+];
+function driversByRevenue(drivers) {
+  drivers.sort(function (driver) {
+    return driver.revenue.localeCompare(driver.revenue);
+  });
 }
 
 function driversByName(drivers) {
