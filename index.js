@@ -13,21 +13,28 @@ function logDriversByHometown(drivers, location) {
   });
 }
 
-function driversByRevenue(drivers) {
-  drivers.sort(function (a, b) {
-	   return a.localeCompare(b);
-   });
-  return drivers;
+function driversByRevenue(array) {
+  var swapped;
+  do {
+    swapped = false;
+    for(var i = 0; i < array.length; i++) {
+      if(array[i] && array[i + 1] && array[i] > array[i + 1]) {
+        swap(array, i, i + 1);
+        swapped = true;
+      }
+    }
+  } while(swapped);
+  return array;
 }
 
 function driversByName(drivers) {
-  
+
 }
 
 function totalRevenue() {
-  
+
 }
 
 function averageRevenue() {
-  
+
 }
