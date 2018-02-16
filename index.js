@@ -15,11 +15,19 @@ function logDriversByHometown(drivers, location) {
 
 function driversByRevenue(drivers) {
   drivers.sort(function (a, b) {
-    return a.revenue - b.revenue;
-  });
+	   return a.localeCompare(b);
+   });
   return drivers;
 }
 
 function driversByName(drivers) {
+  
+}
+
+function totalRevenue() {
+  
+}
+
+function averageRevenue() {
   
 }
