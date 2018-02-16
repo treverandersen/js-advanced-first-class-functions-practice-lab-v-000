@@ -20,8 +20,8 @@ const drivers = [
   { name: 'Bobby',   hometown: 'Tampa Bay',   revenue: 5000 }
 ];
 function driversByRevenue(drivers) {
-  drivers.sort(function (driver) {
-    return driver.revenue.localeCompare(driver.revenue);
+  drivers.sort(function (a, b) {
+	   return a.revenue.localeCompare(b.revenue);
   });
 }
 
